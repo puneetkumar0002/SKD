@@ -51,7 +51,7 @@ export default function KnowledgeHubPreview() {
               >
                 <div className="relative h-64 sm:h-80 w-full bg-[#101F3D] overflow-hidden">
                   <Image
-                    src={featuredPost.image}
+                    src={featuredPost.coverImage}
                     alt={featuredPost.title}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -69,7 +69,7 @@ export default function KnowledgeHubPreview() {
                     <div className="flex items-center space-x-3 text-xs text-slate-200 mb-1">
                       <span className="flex items-center">
                         <Calendar className="w-3.5 h-3.5 mr-1 text-[#79B8FF]" />
-                        {featuredPost.date}
+                        {featuredPost.publishedDate}
                       </span>
                       <span className="text-white/40">•</span>
                       <span className="flex items-center">
@@ -86,7 +86,7 @@ export default function KnowledgeHubPreview() {
                       {featuredPost.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-[#66758C] mt-2 line-clamp-3 leading-relaxed">
-                      {featuredPost.excerpt}
+                      {featuredPost.summary}
                     </p>
                   </div>
 
@@ -122,13 +122,13 @@ export default function KnowledgeHubPreview() {
                     {post.title}
                   </h3>
 
-                  <p className="text-xs text-[#66758C] mt-2 line-clamp-2 leading-relaxed">
-                    {post.excerpt}
-                  </p>
+                    <p className="text-xs text-[#66758C] mt-2 line-clamp-2 leading-relaxed">
+                      {post.summary}
+                    </p>
                 </div>
 
                 <div className="pt-4 border-t border-[#E2E8F5] flex items-center justify-between text-xs font-bold text-[#14243D] mt-4">
-                  <span className="text-[#66758C] font-medium">{post.date}</span>
+                  <span className="text-[#66758C] font-medium">{post.publishedDate}</span>
                   <span className="text-[#2855E8] group-hover:translate-x-1 transition-transform flex items-center">
                     Read Article <ArrowRight className="w-3.5 h-3.5 ml-1" />
                   </span>
