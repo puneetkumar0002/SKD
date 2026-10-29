@@ -24,13 +24,13 @@ export default function ContactPage() {
       <Breadcrumb items={[{ label: "Contact Us" }]} />
 
       <div className="space-y-16 pb-20">
-        <section className="bg-gradient-to-b from-[#F5F8FC] to-white py-14 border-b border-[#E5EBF2]">
+        <section className="bg-gradient-to-b from-[#F8FAFF] via-[#EFF6FF]/60 to-white py-14 border-b border-[#E2E8F5]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
-            <div className="inline-flex items-center space-x-1.5 px-3 py-1 bg-blue-50 text-[#2457D6] rounded-full text-xs font-semibold mb-3">
-              <MapPin className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center space-x-1.5 px-3 py-1 bg-[#EFF6FF] text-[#2855E8] rounded-full text-xs font-semibold mb-3 border border-[#2855E8]/20">
+              <MapPin className="w-3.5 h-3.5 text-[#2855E8]" />
               <span>Chandigarh Tricity Center</span>
             </div>
-            <h1 className="text-3xl sm:text-5xl font-extrabold text-[#10213B] tracking-tight">
+            <h1 className="text-3xl sm:text-5xl font-extrabold text-[#101F3D] tracking-tight">
               Contact & Visit Our Campus
             </h1>
             <p className="text-base text-[#66758C] mt-3 leading-relaxed">
@@ -43,13 +43,13 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
             {/* Left Contact Cards */}
             <div className="lg:col-span-5 space-y-6">
-              <div className="bg-white p-7 rounded-2xl border border-[#E5EBF2] shadow-sm space-y-4">
+              <div className="bg-white p-7 rounded-2xl border border-[#E2E8F5] shadow-card-blue space-y-4">
                 <div className="flex items-start space-x-3.5">
-                  <div className="p-3 bg-amber-50 text-[#D9A441] rounded-xl shrink-0 mt-0.5">
-                    <MapPin className="w-6 h-6" />
+                  <div className="p-3 bg-[#DCA43A]/15 text-[#8F6418] border border-[#DCA43A]/30 rounded-xl shrink-0 mt-0.5">
+                    <MapPin className="w-6 h-6 text-[#DCA43A]" />
                   </div>
                   <div>
-                    <h3 className="text-base font-bold text-[#10213B]">Official Campus Address</h3>
+                    <h3 className="text-base font-bold text-[#101F3D]">Official Campus Address</h3>
                     <p className="text-xs sm:text-sm text-[#66758C] mt-1 leading-relaxed">
                       {siteConfig.address.full}
                     </p>
@@ -57,7 +57,7 @@ export default function ContactPage() {
                       href="https://maps.google.com/?q=Godrej+Eternia+Chandigarh+Plot+70+Industrial+Area+Phase+1"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center text-xs font-bold text-[#2457D6] hover:underline mt-2"
+                      className="inline-flex items-center text-xs font-bold text-[#2855E8] hover:underline mt-2"
                     >
                       <span>Open in Google Maps</span>
                       <ExternalLink className="w-3 h-3 ml-1" />
@@ -65,41 +65,41 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-gray-100 flex items-start space-x-3.5">
-                  <div className="p-3 bg-blue-50 text-[#2457D6] rounded-xl shrink-0 mt-0.5">
+                <div className="pt-4 border-t border-[#E2E8F5] flex items-start space-x-3.5">
+                  <div className="p-3 bg-[#EFF6FF] text-[#2855E8] border border-[#2855E8]/20 rounded-xl shrink-0 mt-0.5">
                     <Phone className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-base font-bold text-[#10213B]">Call Admissions Desk</h3>
+                    <h3 className="text-base font-bold text-[#101F3D]">Call Admissions Desk</h3>
                     <div className="space-y-1 mt-1 text-xs sm:text-sm">
                       <p>
                         <a
                           href={`tel:${siteConfig.contact.primaryPhoneRaw}`}
-                          className="font-bold text-[#172B45] hover:text-[#2457D6]"
+                          className="font-bold text-[#14243D] hover:text-[#2855E8]"
                         >
                           {siteConfig.contact.primaryPhone}
                         </a>{" "}
-                        (General Inquiries)
+                        <span className="text-[#66758C]">(General Inquiries)</span>
                       </p>
                       <p>
                         <a
                           href={`tel:${siteConfig.contact.secondaryPhoneRaw}`}
-                          className="font-bold text-[#172B45] hover:text-[#2457D6]"
+                          className="font-bold text-[#14243D] hover:text-[#2855E8]"
                         >
                           {siteConfig.contact.secondaryPhone}
                         </a>{" "}
-                        (Counselling Desk)
+                        <span className="text-[#66758C]">(Counselling Desk)</span>
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-gray-100 flex items-start space-x-3.5">
-                  <div className="p-3 bg-emerald-50 text-emerald-600 rounded-xl shrink-0 mt-0.5">
+                <div className="pt-4 border-t border-[#E2E8F5] flex items-start space-x-3.5">
+                  <div className="p-3 bg-emerald-50 text-emerald-600 border border-emerald-100 rounded-xl shrink-0 mt-0.5">
                     <MessageCircle className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-base font-bold text-[#10213B]">WhatsApp Support</h3>
+                    <h3 className="text-base font-bold text-[#101F3D]">WhatsApp Support</h3>
                     <p className="text-xs text-[#66758C] mt-1">
                       Quick chat with academic advisors.
                     </p>
@@ -115,12 +115,12 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-gray-100 flex items-start space-x-3.5">
-                  <div className="p-3 bg-purple-50 text-purple-600 rounded-xl shrink-0 mt-0.5">
+                <div className="pt-4 border-t border-[#E2E8F5] flex items-start space-x-3.5">
+                  <div className="p-3 bg-[#101F3D] text-[#79B8FF] rounded-xl shrink-0 mt-0.5">
                     <Clock className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-base font-bold text-[#10213B]">Campus Visiting Hours</h3>
+                    <h3 className="text-base font-bold text-[#101F3D]">Campus Visiting Hours</h3>
                     <p className="text-xs text-[#66758C] mt-1">
                       Monday to Saturday: 9:00 AM – 7:00 PM <br />
                       Sunday: By Prior Appointment Only
@@ -139,10 +139,10 @@ export default function ContactPage() {
 
         {/* Embedded Google Map Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-3xl overflow-hidden border border-[#E5EBF2] shadow-sm">
-            <div className="p-6 border-b border-gray-100 flex justify-between items-center">
+          <div className="bg-white rounded-3xl overflow-hidden border border-[#E2E8F5] shadow-card-blue">
+            <div className="p-6 border-b border-[#E2E8F5] flex justify-between items-center">
               <div>
-                <h3 className="text-lg font-bold text-[#10213B]">
+                <h3 className="text-lg font-bold text-[#101F3D]">
                   Interactive Campus Map & Directions
                 </h3>
                 <p className="text-xs text-[#66758C]">
@@ -153,7 +153,7 @@ export default function ContactPage() {
                 href="https://maps.google.com/?q=Godrej+Eternia+Chandigarh+Plot+70+Industrial+Area+Phase+1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 bg-[#2457D6] text-white rounded-xl text-xs font-bold hover:bg-[#1B45B3] transition-colors"
+                className="px-4 py-2 bg-gradient-to-r from-[#2855E8] to-[#467FFF] text-white rounded-xl text-xs font-bold hover:brightness-110 shadow-md transition-all"
               >
                 Directions
               </a>

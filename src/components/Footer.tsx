@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -10,6 +12,7 @@ import {
   ChevronRight,
   ShieldCheck,
   CheckCircle2,
+  Sparkles,
 } from "lucide-react";
 import { siteConfig } from "@/data/siteData";
 
@@ -40,30 +43,31 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#10213B] text-gray-300 pt-16 pb-12 border-t border-[#183155]">
+    <footer className="bg-[#070E1A] text-slate-300 pt-16 pb-12 border-t border-white/10">
       {/* Top Hiring Partners Ribbon */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 pb-12 border-b border-[#183155]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 pb-12 border-b border-white/10">
         <div className="text-center mb-8">
-          <p className="text-xs uppercase font-bold text-[#D9A441] tracking-wider mb-2">
+          <p className="text-xs uppercase font-bold text-[#E5A835] tracking-widest mb-2 flex items-center justify-center">
+            <Sparkles className="w-3.5 h-3.5 mr-1.5" />
             World-Class Career Opportunities
           </p>
           <h3 className="text-xl sm:text-2xl font-bold text-white">
-            Our Students are Hired by Leading Global Firms & Big 4
+            Our Students are Hired by Leading Global Advisory Firms & Big 4
           </h3>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 opacity-80 hover:opacity-100 transition-opacity">
+        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
           {siteConfig.hiringPartners.map((partner) => (
             <div
               key={partner.name}
-              className="bg-white/10 hover:bg-white/15 px-4 py-2.5 rounded-lg border border-white/10 flex items-center space-x-2 transition-all"
+              className="bg-[#13243F]/70 hover:bg-[#182F52] px-4 py-2.5 rounded-xl border border-white/10 flex items-center space-x-2 transition-all hover:scale-105"
             >
               <div className="relative w-20 h-6 sm:w-24 sm:h-7">
                 <Image
                   src={partner.logo}
                   alt={`${partner.name} hiring partner`}
                   fill
-                  className="object-contain filter brightness-100 contrast-125 invert"
+                  className="object-contain filter brightness-125 contrast-125"
                   sizes="96px"
                 />
               </div>
@@ -78,7 +82,7 @@ export default function Footer() {
           {/* Column 1: Institution Info */}
           <div className="space-y-4">
             <Link href="/" className="inline-block">
-              <div className="relative w-44 h-14 bg-white/90 p-2 rounded-xl">
+              <div className="relative w-44 h-14 bg-white/95 p-2 rounded-2xl shadow">
                 <Image
                   src="/assets/brand/logo.png"
                   alt="SKD Group of Institutions"
@@ -89,16 +93,16 @@ export default function Footer() {
               </div>
             </Link>
 
-            <div className="inline-flex items-center space-x-1.5 px-3 py-1 bg-[#183155] border border-[#2457D6]/40 rounded-full text-[#D9A441] text-xs font-semibold">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-[#13243F] border border-[#E5A835]/30 rounded-full text-[#E5A835] text-xs font-semibold">
               <Award className="w-3.5 h-3.5" />
               <span>Approved ACCA Silver Learning Partner</span>
             </div>
 
-            <p className="text-sm text-gray-300 leading-relaxed">
-              SKD Group of Institutions is a premier institute for professional accounting and finance education in Chandigarh, preparing students, graduates, and working professionals for ACCA, CA, US CMA, and US CPA qualifications.
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              SKD Group of Institutions is a premier institute for professional accounting and finance education in Chandigarh, preparing students and working professionals for ACCA, CA, US CMA, and US CPA qualifications.
             </p>
 
-            <div className="pt-2 text-xs text-gray-400 space-y-1">
+            <div className="pt-2 text-xs text-slate-400 space-y-1.5">
               <p className="flex items-center">
                 <ShieldCheck className="w-3.5 h-3.5 mr-1.5 text-emerald-400" />
                 Verified ACCA Silver Learning Partner (ALP)
@@ -115,12 +119,12 @@ export default function Footer() {
             <h4 className="text-white font-bold text-base mb-4 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-[#2457D6]">
               Professional Courses
             </h4>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-2.5 text-xs sm:text-sm">
               {primaryCourses.map((course) => (
                 <li key={course.href}>
                   <Link
                     href={course.href}
-                    className="hover:text-white flex items-center group transition-colors"
+                    className="hover:text-white flex items-center group transition-colors text-slate-300"
                   >
                     <ChevronRight className="w-3.5 h-3.5 mr-1 text-[#2457D6] group-hover:translate-x-1 transition-transform" />
                     <span>{course.name}</span>
@@ -132,17 +136,17 @@ export default function Footer() {
 
           {/* Column 3: Quick Links */}
           <div>
-            <h4 className="text-white font-bold text-base mb-4 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-[#D9A441]">
+            <h4 className="text-white font-bold text-base mb-4 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-[#E5A835]">
               Institution & Support
             </h4>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="hover:text-white flex items-center group transition-colors text-xs sm:text-sm"
+                    className="hover:text-white flex items-center group transition-colors text-slate-300"
                   >
-                    <ChevronRight className="w-3 h-3 mr-1 text-[#D9A441] group-hover:translate-x-1 transition-transform" />
+                    <ChevronRight className="w-3 h-3 mr-1 text-[#E5A835] group-hover:translate-x-1 transition-transform" />
                     <span>{link.name}</span>
                   </Link>
                 </li>
@@ -156,10 +160,10 @@ export default function Footer() {
               Chandigarh Campus
             </h4>
 
-            <div className="space-y-3 text-sm">
+            <div className="space-y-3 text-xs sm:text-sm">
               <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-[#D9A441] shrink-0 mt-0.5" />
-                <p className="text-gray-300 leading-snug text-xs sm:text-sm">
+                <MapPin className="w-5 h-5 text-[#E5A835] shrink-0 mt-0.5" />
+                <p className="text-slate-300 leading-snug">
                   {siteConfig.address.full}
                 </p>
               </div>
@@ -169,14 +173,14 @@ export default function Footer() {
                 <div>
                   <a
                     href={`tel:${siteConfig.contact.primaryPhoneRaw}`}
-                    className="hover:text-white text-xs sm:text-sm font-semibold"
+                    className="hover:text-white font-semibold text-slate-200"
                   >
                     {siteConfig.contact.primaryPhone}
                   </a>
-                  <span className="text-gray-400 text-xs"> / </span>
+                  <span className="text-slate-500"> / </span>
                   <a
                     href={`tel:${siteConfig.contact.secondaryPhoneRaw}`}
-                    className="hover:text-white text-xs sm:text-sm font-semibold"
+                    className="hover:text-white font-semibold text-slate-200"
                   >
                     {siteConfig.contact.secondaryPhone}
                   </a>
@@ -187,7 +191,7 @@ export default function Footer() {
                 <Mail className="w-4 h-4 text-[#2457D6] shrink-0" />
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
-                  className="hover:text-white text-xs sm:text-sm break-all"
+                  className="hover:text-white text-slate-200 break-all"
                 >
                   {siteConfig.contact.email}
                 </a>
@@ -199,7 +203,7 @@ export default function Footer() {
                 href="https://maps.google.com/?q=Godrej+Eternia+Chandigarh+Plot+70+Industrial+Area+Phase+1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-4 py-2 bg-[#183155] hover:bg-[#2457D6] text-white text-xs font-semibold rounded-lg transition-colors border border-white/10"
+                className="inline-flex items-center px-4 py-2 bg-[#13243F] hover:bg-[#2457D6] text-white text-xs font-semibold rounded-xl transition-colors border border-white/10"
               >
                 <span>Open in Google Maps</span>
                 <ExternalLink className="w-3.5 h-3.5 ml-1.5" />
@@ -209,9 +213,9 @@ export default function Footer() {
         </div>
 
         {/* Bottom Legal Bar */}
-        <div className="pt-8 border-t border-[#183155] flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 space-y-4 md:space-y-0">
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-slate-400 space-y-4 md:space-y-0">
           <p>
-            © {currentYear} {siteConfig.name}. All Rights Reserved. Professional qualifications (ACCA, CA, US CMA, US CPA) are awarded by their respective governing statutory bodies.
+            © {currentYear} {siteConfig.name}. All Rights Reserved. Professional qualifications (ACCA, CA, US CMA, US CPA) are awarded by their respective statutory bodies.
           </p>
 
           <div className="flex items-center space-x-6">
@@ -221,7 +225,7 @@ export default function Footer() {
             <Link href="/terms-conditions" className="hover:text-white transition-colors">
               Terms & Conditions
             </Link>
-            <Link href="/admin" className="hover:text-white transition-colors text-gray-400">
+            <Link href="/admin" className="hover:text-white transition-colors text-slate-400">
               Admin Login
             </Link>
           </div>

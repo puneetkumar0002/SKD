@@ -1,6 +1,19 @@
 {
   "enquiries": [
     {
+      "name": "Aman Deep Sharma",
+      "mobile": "9876543210",
+      "email": "aman@example.com",
+      "city": "Chandigarh",
+      "course": "ACCA Coaching in Chandigarh",
+      "mode": "Classroom (Chandigarh)",
+      "message": "Looking for upcoming weekend batch details.",
+      "source": "Automated QA Verification",
+      "id": "enq-1793186958197",
+      "status": "New",
+      "createdAt": "2026-10-28T11:29:18.197Z"
+    },
+    {
       "name": "Aman Deep",
       "mobile": "9876543210",
       "email": "aman.deep@example.com",

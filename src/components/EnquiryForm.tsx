@@ -124,13 +124,13 @@ export default function EnquiryForm({
   };
 
   return (
-    <div className={`bg-white rounded-2xl border border-[#E5EBF2] shadow-xl ${compact ? "p-4 sm:p-6" : "p-6 sm:p-8"}`}>
+    <div className={`bg-white rounded-2xl border border-[#E2E8F5] shadow-card-blue ${compact ? "p-4 sm:p-6" : "p-6 sm:p-8"}`}>
       <div className="mb-6">
-        <div className="inline-flex items-center space-x-1.5 px-3 py-1 bg-blue-50 text-[#2457D6] rounded-full text-xs font-semibold mb-2">
-          <Sparkles className="w-3.5 h-3.5 text-[#D9A441]" />
+        <div className="inline-flex items-center space-x-1.5 px-3 py-1 bg-[#EFF6FF] text-[#2855E8] rounded-full text-xs font-semibold mb-2 border border-[#2855E8]/20">
+          <Sparkles className="w-3.5 h-3.5 text-[#DCA43A]" />
           <span>Free 1-on-1 Academic Counselling</span>
         </div>
-        <h3 className="text-xl sm:text-2xl font-bold text-[#10213B]">
+        <h3 className="text-xl sm:text-2xl font-bold text-[#101F3D]">
           Book Your Counselling Session
         </h3>
         <p className="text-sm text-[#66758C] mt-1">
@@ -149,14 +149,14 @@ export default function EnquiryForm({
           </p>
           <div className="p-3 bg-white rounded-lg border border-emerald-100 text-xs text-gray-700">
             For urgent queries, call us directly at{" "}
-            <a href="tel:918054811313" className="font-bold text-[#2457D6] underline">
+            <a href="tel:918054811313" className="font-bold text-[#2855E8] underline">
               +91 80548 11313
             </a>
           </div>
           <button
             type="button"
             onClick={() => setSuccessMsg(null)}
-            className="mt-4 text-xs font-semibold text-[#2457D6] hover:underline"
+            className="mt-4 text-xs font-semibold text-[#2855E8] hover:underline"
           >
             Submit another query
           </button>
@@ -171,7 +171,7 @@ export default function EnquiryForm({
           )}
 
           <div>
-            <label className="block text-xs font-bold text-[#172B45] uppercase tracking-wider mb-1.5">
+            <label className="block text-xs font-bold text-[#14243D] uppercase tracking-wider mb-1.5">
               Full Name *
             </label>
             <input
@@ -180,13 +180,13 @@ export default function EnquiryForm({
               placeholder="e.g. Karanveer Sharma"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full px-4 py-3 rounded-xl border border-[#E5EBF2] bg-[#F5F8FC]/50 text-sm text-[#172B45] placeholder-gray-400 focus:outline-none focus:border-[#2457D6] focus:bg-white transition-all"
+              className="w-full px-4 py-3 rounded-xl border border-[#E2E8F5] bg-[#F8FAFF] text-sm text-[#14243D] placeholder-gray-400 focus:outline-none focus:border-[#2855E8] focus:bg-white transition-all shadow-xs"
             />
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-xs font-bold text-[#172B45] uppercase tracking-wider mb-1.5">
+              <label className="block text-xs font-bold text-[#14243D] uppercase tracking-wider mb-1.5">
                 Mobile Number *
               </label>
               <div className="relative">
@@ -200,13 +200,13 @@ export default function EnquiryForm({
                   placeholder="98765 43210"
                   value={formData.mobile}
                   onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
-                  className="w-full pl-12 pr-4 py-3 rounded-xl border border-[#E5EBF2] bg-[#F5F8FC]/50 text-sm text-[#172B45] placeholder-gray-400 focus:outline-none focus:border-[#2457D6] focus:bg-white transition-all"
+                  className="w-full pl-12 pr-4 py-3 rounded-xl border border-[#E2E8F5] bg-[#F8FAFF] text-sm text-[#14243D] placeholder-gray-400 focus:outline-none focus:border-[#2855E8] focus:bg-white transition-all shadow-xs"
                 />
               </div>
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-[#172B45] uppercase tracking-wider mb-1.5">
+              <label className="block text-xs font-bold text-[#14243D] uppercase tracking-wider mb-1.5">
                 Email Address *
               </label>
               <input
@@ -215,20 +215,20 @@ export default function EnquiryForm({
                 placeholder="karan@example.com"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-4 py-3 rounded-xl border border-[#E5EBF2] bg-[#F5F8FC]/50 text-sm text-[#172B45] placeholder-gray-400 focus:outline-none focus:border-[#2457D6] focus:bg-white transition-all"
+                className="w-full px-4 py-3 rounded-xl border border-[#E2E8F5] bg-[#F8FAFF] text-sm text-[#14243D] placeholder-gray-400 focus:outline-none focus:border-[#2855E8] focus:bg-white transition-all shadow-xs"
               />
             </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-xs font-bold text-[#172B45] uppercase tracking-wider mb-1.5">
+              <label className="block text-xs font-bold text-[#14243D] uppercase tracking-wider mb-1.5">
                 Interested Course *
               </label>
               <select
                 value={formData.course}
                 onChange={(e) => setFormData({ ...formData, course: e.target.value })}
-                className="w-full px-3 py-3 rounded-xl border border-[#E5EBF2] bg-[#F5F8FC]/50 text-sm text-[#172B45] focus:outline-none focus:border-[#2457D6] focus:bg-white transition-all"
+                className="w-full px-3 py-3 rounded-xl border border-[#E2E8F5] bg-[#F8FAFF] text-sm text-[#14243D] focus:outline-none focus:border-[#2855E8] focus:bg-white transition-all shadow-xs"
               >
                 {coursesData.map((c) => (
                   <option key={c.slug} value={c.title}>
@@ -239,7 +239,7 @@ export default function EnquiryForm({
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-[#172B45] uppercase tracking-wider mb-1.5">
+              <label className="block text-xs font-bold text-[#14243D] uppercase tracking-wider mb-1.5">
                 City / Location
               </label>
               <input
@@ -247,13 +247,13 @@ export default function EnquiryForm({
                 placeholder="Chandigarh / Mohali / Panchkula"
                 value={formData.city}
                 onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                className="w-full px-4 py-3 rounded-xl border border-[#E5EBF2] bg-[#F5F8FC]/50 text-sm text-[#172B45] placeholder-gray-400 focus:outline-none focus:border-[#2457D6] focus:bg-white transition-all"
+                className="w-full px-4 py-3 rounded-xl border border-[#E2E8F5] bg-[#F8FAFF] text-sm text-[#14243D] placeholder-gray-400 focus:outline-none focus:border-[#2855E8] focus:bg-white transition-all shadow-xs"
               />
             </div>
           </div>
 
           <div>
-            <label className="block text-xs font-bold text-[#172B45] uppercase tracking-wider mb-1.5">
+            <label className="block text-xs font-bold text-[#14243D] uppercase tracking-wider mb-1.5">
               Preferred Learning Mode
             </label>
             <div className="grid grid-cols-2 gap-2 text-xs font-medium">
@@ -272,8 +272,8 @@ export default function EnquiryForm({
                   }
                   className={`py-2 px-3 rounded-xl border text-center transition-all ${
                     formData.mode === m
-                      ? "border-[#2457D6] bg-blue-50 text-[#2457D6] font-bold"
-                      : "border-[#E5EBF2] bg-white text-gray-600 hover:bg-gray-50"
+                      ? "border-[#2855E8] bg-[#EFF6FF] text-[#2855E8] font-bold shadow-xs"
+                      : "border-[#E2E8F5] bg-white text-[#66758C] hover:bg-gray-50"
                   }`}
                 >
                   {m}
@@ -284,7 +284,7 @@ export default function EnquiryForm({
 
           {!compact && (
             <div>
-              <label className="block text-xs font-bold text-[#172B45] uppercase tracking-wider mb-1.5">
+              <label className="block text-xs font-bold text-[#14243D] uppercase tracking-wider mb-1.5">
                 Your Academic Background / Questions (Optional)
               </label>
               <textarea
@@ -292,7 +292,7 @@ export default function EnquiryForm({
                 placeholder="e.g., Completed Class 12th commerce / B.Com 2nd year. Want to know about exam fees & batch start dates."
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl border border-[#E5EBF2] bg-[#F5F8FC]/50 text-sm text-[#172B45] placeholder-gray-400 focus:outline-none focus:border-[#2457D6] focus:bg-white transition-all"
+                className="w-full px-4 py-2.5 rounded-xl border border-[#E2E8F5] bg-[#F8FAFF] text-sm text-[#14243D] placeholder-gray-400 focus:outline-none focus:border-[#2855E8] focus:bg-white transition-all shadow-xs"
               />
             </div>
           )}
@@ -303,7 +303,7 @@ export default function EnquiryForm({
               id="consent"
               checked={formData.consent}
               onChange={(e) => setFormData({ ...formData, consent: e.target.checked })}
-              className="mt-1 h-4 w-4 rounded border-gray-300 text-[#2457D6] focus:ring-[#2457D6]"
+              className="mt-1 h-4 w-4 rounded border-[#E2E8F5] text-[#2855E8] focus:ring-[#2855E8]"
             />
             <label htmlFor="consent" className="text-xs text-[#66758C] leading-snug">
               I authorize SKD Group of Institutions counsellors to contact me via Call, WhatsApp, and Email regarding course details.
@@ -313,7 +313,7 @@ export default function EnquiryForm({
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3.5 px-6 rounded-xl bg-[#2457D6] hover:bg-[#1B45B3] text-white font-bold text-sm sm:text-base shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 transition-all flex justify-center items-center space-x-2 disabled:opacity-70 disabled:cursor-not-allowed group"
+            className="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#2855E8] to-[#467FFF] hover:brightness-110 text-white font-bold text-sm sm:text-base shadow-lg shadow-blue-500/25 transition-all flex justify-center items-center space-x-2 disabled:opacity-70 disabled:cursor-not-allowed group"
           >
             {loading ? (
               <>
@@ -328,7 +328,7 @@ export default function EnquiryForm({
             )}
           </button>
 
-          <p className="text-[11px] text-center text-gray-400 flex items-center justify-center space-x-1">
+          <p className="text-[11px] text-center text-slate-400 flex items-center justify-center space-x-1">
             <ShieldCheck className="w-3.5 h-3.5 text-emerald-500 inline" />
             <span>100% Privacy Guaranteed. No spam. No misleading claims.</span>
           </p>

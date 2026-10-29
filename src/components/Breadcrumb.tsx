@@ -50,7 +50,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
           <li>
             <Link
               href="/"
-              className="inline-flex items-center hover:text-[#2457D6] transition-colors"
+              className="inline-flex items-center hover:text-[#2855E8] transition-colors"
             >
               <Home className="w-3.5 h-3.5 mr-1" />
               <span>Home</span>
@@ -61,10 +61,10 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
             const isLast = index === items.length - 1;
             return (
               <li key={index} className="flex items-center space-x-2">
-                <ChevronRight className="w-3 h-3 text-gray-400 shrink-0" />
+                <ChevronRight className="w-3 h-3 text-slate-400 shrink-0" />
                 {isLast || !item.href ? (
                   <span
-                    className="font-semibold text-[#172B45] truncate max-w-[200px] sm:max-w-none"
+                    className="font-semibold text-[#101F3D] truncate max-w-[200px] sm:max-w-none"
                     aria-current="page"
                   >
                     {item.label}
@@ -72,7 +72,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
                 ) : (
                   <Link
                     href={item.href}
-                    className="hover:text-[#2457D6] transition-colors"
+                    className="hover:text-[#2855E8] transition-colors"
                   >
                     {item.label}
                   </Link>

@@ -97,6 +97,8 @@ export const metadata: Metadata = {
   },
 };
 
+import SmoothScrollProvider from "@/components/motion/SmoothScrollProvider";
+
 export default function RootLayout({
   children,
 }: {
@@ -111,10 +113,12 @@ export default function RootLayout({
         <StructuredData />
       </head>
       <body className="min-h-full flex flex-col bg-white text-[#172B45] antialiased">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <FloatingActions />
+        <SmoothScrollProvider>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <FloatingActions />
+        </SmoothScrollProvider>
       </body>
     </html>
   );

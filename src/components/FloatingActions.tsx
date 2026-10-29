@@ -60,10 +60,10 @@ export default function FloatingActions() {
       </div>
 
       {/* Sticky Mobile Bottom Bar (Always Accessible for High Conversions) */}
-      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-[#E5EBF2] p-2 flex items-center space-x-2 shadow-2xl">
+      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-xl border-t border-slate-200 p-2.5 flex items-center space-x-2 shadow-2xl">
         <a
           href={`tel:${siteConfig.contact.primaryPhoneRaw}`}
-          className="flex-1 py-2.5 px-3 bg-[#F5F8FC] border border-[#E5EBF2] text-[#10213B] font-bold text-xs rounded-xl flex items-center justify-center space-x-1.5"
+          className="flex-1 py-2.5 px-3 bg-slate-50 border border-slate-200 text-slate-800 font-bold text-xs rounded-xl flex items-center justify-center space-x-1.5"
         >
           <Phone className="w-3.5 h-3.5 text-[#2457D6]" />
           <span>Call Mentors</span>
@@ -81,7 +81,7 @@ export default function FloatingActions() {
 
         <Link
           href="/admissions"
-          className="flex-1 py-2.5 px-3 bg-[#2457D6] text-white font-bold text-xs rounded-xl flex items-center justify-center space-x-1 shadow-md shadow-blue-500/20"
+          className="flex-1 py-2.5 px-3 bg-gradient-to-r from-[#2457D6] to-[#1943B0] text-white font-bold text-xs rounded-xl flex items-center justify-center space-x-1 shadow-md shadow-blue-500/25"
         >
           <Calendar className="w-3.5 h-3.5" />
           <span>Apply Now</span>

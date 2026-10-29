@@ -88,14 +88,14 @@ export default function CoursePageTemplate({ course }: CoursePageTemplateProps) 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
               <div className="lg:col-span-7 space-y-6">
-                <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 bg-[#10213B] text-white rounded-full text-xs sm:text-sm font-semibold">
-                  <Award className="w-4 h-4 text-[#D9A441]" />
-                  <span className="text-[#D9A441]">{course.badge}</span>
-                  <span className="text-gray-400">|</span>
-                  <span className="text-gray-200">{course.awardingBody}</span>
+                <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 bg-[#09121F] text-white rounded-full text-xs sm:text-sm font-semibold border border-white/10 shadow-sm">
+                  <Award className="w-4 h-4 text-[#E5A835]" />
+                  <span className="text-[#E5A835]">{course.badge}</span>
+                  <span className="text-slate-500">|</span>
+                  <span className="text-slate-200">{course.awardingBody}</span>
                 </div>
 
-                <h1 className="text-3xl sm:text-5xl font-extrabold text-[#10213B] tracking-tight leading-[1.15]">
+                <h1 className="text-3xl sm:text-5xl font-extrabold text-[#09121F] tracking-tight leading-[1.15]">
                   {course.title}
                 </h1>
 
@@ -137,7 +137,7 @@ export default function CoursePageTemplate({ course }: CoursePageTemplateProps) 
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
                   <a
                     href="#enquiry-section"
-                    className="inline-flex justify-center items-center px-7 py-3.5 bg-[#2457D6] hover:bg-[#1B45B3] text-white font-bold rounded-xl shadow-lg shadow-blue-500/25 transition-all text-sm group"
+                    className="inline-flex justify-center items-center px-7 py-3.5 bg-gradient-to-r from-[#2457D6] to-[#1943B0] hover:from-[#1943B0] hover:to-[#122F7F] text-white font-bold rounded-xl shadow-lg shadow-blue-500/25 transition-all text-sm group"
                   >
                     <span>Enquire for Upcoming Batches</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -145,7 +145,7 @@ export default function CoursePageTemplate({ course }: CoursePageTemplateProps) 
 
                   <a
                     href={`tel:${siteConfig.contact.primaryPhoneRaw}`}
-                    className="inline-flex justify-center items-center px-6 py-3.5 bg-white text-[#10213B] font-bold rounded-xl border border-[#E5EBF2] hover:border-[#2457D6] transition-all text-sm shadow-sm"
+                    className="inline-flex justify-center items-center px-6 py-3.5 bg-white text-[#09121F] font-bold rounded-xl border border-slate-200 hover:border-[#2457D6] hover:text-[#2457D6] transition-all text-sm shadow-sm"
                   >
                     <Phone className="w-4 h-4 mr-2 text-[#2457D6]" />
                     <span>Call Mentors</span>
@@ -164,9 +164,9 @@ export default function CoursePageTemplate({ course }: CoursePageTemplateProps) 
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 500px"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#10213B]/80 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#09121F]/80 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <span className="text-xs text-[#D9A441] font-bold block mb-1">
+                    <span className="text-xs text-[#E5A835] font-bold block mb-1">
                       SKD Professional Training Division
                     </span>
                     <p className="text-sm font-semibold">

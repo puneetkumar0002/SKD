@@ -21,13 +21,13 @@ export default function PlacementsPage() {
       <Breadcrumb items={[{ label: "Placements & Career Support" }]} />
 
       <div className="space-y-16 pb-20">
-        <section className="bg-gradient-to-b from-[#F5F8FC] to-white py-14 border-b border-[#E5EBF2]">
+        <section className="bg-gradient-to-b from-[#F8FAFF] via-[#EFF6FF]/60 to-white py-14 border-b border-[#E2E8F5]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
-            <div className="inline-flex items-center space-x-1.5 px-3 py-1 bg-blue-50 text-[#2457D6] rounded-full text-xs font-semibold mb-3">
-              <Briefcase className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center space-x-1.5 px-3 py-1 bg-[#EFF6FF] text-[#2855E8] rounded-full text-xs font-semibold mb-3 border border-[#2855E8]/20">
+              <Briefcase className="w-3.5 h-3.5 text-[#2855E8]" />
               <span>Career Guidance & Industry Connect</span>
             </div>
-            <h1 className="text-3xl sm:text-5xl font-extrabold text-[#10213B] tracking-tight">
+            <h1 className="text-3xl sm:text-5xl font-extrabold text-[#101F3D] tracking-tight">
               Placements & Career Pathways
             </h1>
             <p className="text-base text-[#66758C] mt-3 leading-relaxed">
@@ -39,7 +39,7 @@ export default function PlacementsPage() {
         {/* Corporate Hiring Partners */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-xl sm:text-2xl font-bold text-[#10213B]">
+            <h2 className="text-xl sm:text-2xl font-bold text-[#101F3D]">
               Top Employers Hiring ACCA, CA & US CMA Talent
             </h2>
             <p className="text-xs sm:text-sm text-[#66758C] mt-1">
@@ -51,7 +51,7 @@ export default function PlacementsPage() {
             {siteConfig.hiringPartners.map((p) => (
               <div
                 key={p.name}
-                className="bg-white p-6 rounded-2xl border border-[#E5EBF2] shadow-sm flex flex-col items-center justify-center space-y-3 hover:border-[#2457D6] transition-colors"
+                className="bg-white p-6 rounded-2xl border border-[#E2E8F5] shadow-card-blue flex flex-col items-center justify-center space-y-3 hover:border-[#2855E8]/40 hover:shadow-md hover:-translate-y-0.5 transition-all"
               >
                 <div className="relative w-28 h-10">
                   <Image
@@ -62,17 +62,17 @@ export default function PlacementsPage() {
                     sizes="112px"
                   />
                 </div>
-                <span className="text-xs font-bold text-[#172B45]">{p.name}</span>
+                <span className="text-xs font-bold text-[#14243D]">{p.name}</span>
               </div>
             ))}
           </div>
         </section>
 
         {/* 4-Step Career Cell Process */}
-        <section className="bg-[#F5F8FC] py-16 border-y border-[#E5EBF2]">
+        <section className="bg-[#EFF6FF]/60 py-16 border-y border-[#E2E8F5]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#10213B]">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#101F3D]">
                 How Our Career Cell Supports You
               </h2>
               <p className="text-sm text-[#66758C] mt-2">
@@ -81,41 +81,41 @@ export default function PlacementsPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              <div className="bg-white p-6 rounded-2xl border border-[#E5EBF2] space-y-3 shadow-sm">
-                <span className="w-8 h-8 rounded-full bg-blue-50 text-[#2457D6] font-bold text-xs flex items-center justify-center">
+              <div className="bg-white p-6 rounded-2xl border border-[#E2E8F5] space-y-3 shadow-card-blue">
+                <span className="w-8 h-8 rounded-full bg-[#EFF6FF] text-[#2855E8] border border-[#2855E8]/20 font-bold text-xs flex items-center justify-center">
                   01
                 </span>
-                <h3 className="text-base font-bold text-[#10213B]">CV & LinkedIn Optimization</h3>
+                <h3 className="text-base font-bold text-[#101F3D]">CV & LinkedIn Optimization</h3>
                 <p className="text-xs text-[#66758C] leading-relaxed">
                   Formatting your resume to match international Big 4 ATS standards, highlighting paper clearances, IFRS proficiency, and technical tools.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-2xl border border-[#E5EBF2] space-y-3 shadow-sm">
-                <span className="w-8 h-8 rounded-full bg-amber-50 text-[#D9A441] font-bold text-xs flex items-center justify-center">
+              <div className="bg-white p-6 rounded-2xl border border-[#E2E8F5] space-y-3 shadow-card-blue">
+                <span className="w-8 h-8 rounded-full bg-[#DCA43A]/15 text-[#8F6418] border border-[#DCA43A]/30 font-bold text-xs flex items-center justify-center">
                   02
                 </span>
-                <h3 className="text-base font-bold text-[#10213B]">Technical Mock Interviews</h3>
+                <h3 className="text-base font-bold text-[#101F3D]">Technical Mock Interviews</h3>
                 <p className="text-xs text-[#66758C] leading-relaxed">
                   Rigorous 1-on-1 mock interviews conducted by alumni and practicing CAs/ACCAs, testing audit procedures, accounting standards, and financial analysis.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-2xl border border-[#E5EBF2] space-y-3 shadow-sm">
-                <span className="w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 font-bold text-xs flex items-center justify-center">
+              <div className="bg-white p-6 rounded-2xl border border-[#E2E8F5] space-y-3 shadow-card-blue">
+                <span className="w-8 h-8 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100 font-bold text-xs flex items-center justify-center">
                   03
                 </span>
-                <h3 className="text-base font-bold text-[#10213B]">Executive Communication</h3>
+                <h3 className="text-base font-bold text-[#101F3D]">Executive Communication</h3>
                 <p className="text-xs text-[#66758C] leading-relaxed">
                   Mastering business presentation etiquette, corporate email etiquette, and behavioral case study answers for leadership interviews.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-2xl border border-[#E5EBF2] space-y-3 shadow-sm">
-                <span className="w-8 h-8 rounded-full bg-purple-50 text-purple-600 font-bold text-xs flex items-center justify-center">
+              <div className="bg-white p-6 rounded-2xl border border-[#E2E8F5] space-y-3 shadow-card-blue">
+                <span className="w-8 h-8 rounded-full bg-[#101F3D] text-[#79B8FF] font-bold text-xs flex items-center justify-center">
                   04
                 </span>
-                <h3 className="text-base font-bold text-[#10213B]">Direct Corporate Referrals</h3>
+                <h3 className="text-base font-bold text-[#101F3D]">Direct Corporate Referrals</h3>
                 <p className="text-xs text-[#66758C] leading-relaxed">
                   Connecting qualified candidates directly with HR teams, alumni networks, and recruitment portals of partner organizations.
                 </p>

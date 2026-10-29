@@ -22,13 +22,13 @@ export default function GalleryPage() {
       <Breadcrumb items={[{ label: "Campus Life & Gallery" }]} />
 
       <div className="space-y-12 pb-20">
-        <section className="bg-gradient-to-b from-[#F5F8FC] to-white py-14 border-b border-[#E5EBF2]">
+        <section className="bg-gradient-to-b from-[#F8FAFF] via-[#EFF6FF]/60 to-white py-14 border-b border-[#E2E8F5]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
-            <div className="inline-flex items-center space-x-1.5 px-3 py-1 bg-blue-50 text-[#2457D6] rounded-full text-xs font-semibold mb-3">
-              <Building className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center space-x-1.5 px-3 py-1 bg-[#EFF6FF] text-[#2855E8] rounded-full text-xs font-semibold mb-3 border border-[#2855E8]/20">
+              <Building className="w-3.5 h-3.5 text-[#2855E8]" />
               <span>Godrej Eternia Campus Life</span>
             </div>
-            <h1 className="text-3xl sm:text-5xl font-extrabold text-[#10213B] tracking-tight">
+            <h1 className="text-3xl sm:text-5xl font-extrabold text-[#101F3D] tracking-tight">
               Life at SKD Group of Institutions
             </h1>
             <p className="text-base text-[#66758C] mt-3 leading-relaxed">
@@ -44,8 +44,8 @@ export default function GalleryPage() {
                   onClick={() => setActiveCategory(cat)}
                   className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
                     activeCategory === cat
-                      ? "bg-[#2457D6] text-white shadow-md shadow-blue-500/20"
-                      : "bg-white text-[#66758C] hover:bg-gray-100 border border-[#E5EBF2]"
+                      ? "bg-gradient-to-r from-[#2855E8] to-[#467FFF] text-white shadow-md shadow-blue-500/25"
+                      : "bg-white text-[#66758C] hover:bg-[#EFF6FF] border border-[#E2E8F5]"
                   }`}
                 >
                   {cat}
@@ -62,7 +62,7 @@ export default function GalleryPage() {
               <div
                 key={item.id}
                 onClick={() => setSelectedItem(item)}
-                className="group relative rounded-2xl overflow-hidden shadow-sm bg-white border border-[#E5EBF2] h-72 cursor-pointer transition-all hover:-translate-y-1 hover:shadow-lg"
+                className="group relative rounded-2xl overflow-hidden shadow-card-blue bg-white border border-[#E2E8F5] hover:border-[#2855E8]/40 h-72 cursor-pointer transition-all hover:-translate-y-1 hover:shadow-xl"
               >
                 <Image
                   src={item.image}
@@ -71,18 +71,18 @@ export default function GalleryPage() {
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#101F3D]/90 via-[#101F3D]/30 to-transparent opacity-90 group-hover:opacity-100 transition-opacity" />
 
                 <div className="absolute top-3 right-3 p-2 bg-black/40 backdrop-blur-md rounded-full text-white opacity-0 group-hover:opacity-100 transition-opacity">
                   <ZoomIn className="w-4 h-4" />
                 </div>
 
                 <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#D9A441] block mb-1">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#DCA43A] block mb-1">
                     {item.category}
                   </span>
                   <h3 className="text-base font-bold leading-snug">{item.title}</h3>
-                  <p className="text-xs text-gray-200 mt-1 line-clamp-2">{item.caption}</p>
+                  <p className="text-xs text-slate-200 mt-1 line-clamp-2">{item.caption}</p>
                 </div>
               </div>
             ))}
@@ -101,7 +101,7 @@ export default function GalleryPage() {
               <X className="w-6 h-6" />
             </button>
 
-            <div className="max-w-4xl w-full bg-[#10213B] rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+            <div className="max-w-4xl w-full bg-[#101F3D] rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
               <div className="relative h-[320px] sm:h-[480px] w-full bg-black">
                 <Image
                   src={selectedItem.image}
@@ -112,12 +112,12 @@ export default function GalleryPage() {
                 />
               </div>
 
-              <div className="p-6 text-white bg-[#10213B] space-y-1">
-                <span className="text-xs font-bold text-[#D9A441] uppercase tracking-wider">
+              <div className="p-6 text-white bg-[#101F3D] space-y-1">
+                <span className="text-xs font-bold text-[#DCA43A] uppercase tracking-wider">
                   {selectedItem.category}
                 </span>
                 <h3 className="text-lg sm:text-xl font-bold">{selectedItem.title}</h3>
-                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
                   {selectedItem.caption}
                 </p>
               </div>
