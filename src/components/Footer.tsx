@@ -102,7 +102,7 @@ export default function Footer() {
             <div className="flex items-center space-x-3 pt-1">
               <div className="relative w-16 h-16 rounded-xl overflow-hidden bg-white shadow-md border border-white/10">
                 <Image
-                  src="/assets/images/acca-silver-learning-partner.jpg"
+                  src="/assets/images/acca-silver-learning-partner.png"
                   alt="ACCA Silver Learning Partner"
                   fill
                   className="object-contain p-1"
@@ -111,7 +111,7 @@ export default function Footer() {
               </div>
               <div className="relative w-16 h-16 rounded-xl overflow-hidden bg-white shadow-md border border-white/10">
                 <Image
-                  src="/assets/images/acca-cbe-centre.jpg"
+                  src="/assets/images/acca-cbe-centre.png"
                   alt="ACCA Licensed CBE Centre"
                   fill
                   className="object-contain p-1"

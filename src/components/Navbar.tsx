@@ -152,7 +152,7 @@ export default function Navbar() {
             <div className="hidden sm:flex items-center space-x-2 border-l border-slate-200 pl-3">
               <div className="relative w-12 h-12 rounded-lg overflow-hidden shadow-sm border border-slate-100">
                 <Image
-                  src="/assets/images/acca-silver-learning-partner.jpg"
+                  src="/assets/images/acca-silver-learning-partner.png"
                   alt="ACCA Silver Learning Partner"
                   fill
                   className="object-contain"
@@ -161,7 +161,7 @@ export default function Navbar() {
               </div>
               <div className="relative w-12 h-12 rounded-lg overflow-hidden shadow-sm border border-slate-100">
                 <Image
-                  src="/assets/images/acca-cbe-centre.jpg"
+                  src="/assets/images/acca-cbe-centre.png"
                   alt="ACCA Licensed CBE Centre"
                   fill
                   className="object-contain"
@@ -382,7 +382,7 @@ export default function Navbar() {
               <div className="flex items-center space-x-2">
                 <div className="relative w-8 h-8 rounded overflow-hidden border border-white/20">
                   <Image
-                    src="/assets/images/acca-silver-learning-partner.jpg"
+                    src="/assets/images/acca-silver-learning-partner.png"
                     alt="ACCA Silver Learning Partner"
                     fill
                     className="object-contain"
@@ -391,7 +391,7 @@ export default function Navbar() {
                 </div>
                 <div className="relative w-8 h-8 rounded overflow-hidden border border-white/20">
                   <Image
-                    src="/assets/images/acca-cbe-centre.jpg"
+                    src="/assets/images/acca-cbe-centre.png"
                     alt="ACCA Licensed CBE Centre"
                     fill
                     className="object-contain"
