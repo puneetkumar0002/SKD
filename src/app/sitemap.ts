@@ -4,110 +4,114 @@ import { blogPostsData } from "@/data/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://skdgroupofinstitutions.com";
+  const now = new Date();
 
   // Static institutional pages
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "daily",
       priority: 1.0,
     },
     {
       url: `${baseUrl}/about-us`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/courses`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/results`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/placements`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/faculty`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: `${baseUrl}/student-testimonials`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: `${baseUrl}/gallery`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.6,
     },
     {
       url: `${baseUrl}/admissions`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/scholarships`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "daily",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/contact-us`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/privacy-policy`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
       url: `${baseUrl}/terms-conditions`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "yearly",
       priority: 0.3,
     },
   ];
 
-  // Course pages
+  // Course pages — dynamically generated from coursesData slugs
   const coursePages: MetadataRoute.Sitemap = coursesData.map((course) => ({
     url: `${baseUrl}/${course.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly",
+    lastModified: now,
+    changeFrequency: "weekly" as const,
     priority: course.slug === "acca-coaching-chandigarh" ? 0.95 : 0.85,
   }));
 
-  // Blog post pages
-  const blogPages: MetadataRoute.Sitemap = blogPostsData.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.publishedDate),
-    changeFrequency: "monthly",
-    priority: 0.75,
-  }));
+  // Blog post pages — use a safe ISO date parse
+  const blogPages: MetadataRoute.Sitemap = blogPostsData.map((post) => {
+    const parsed = Date.parse(post.publishedDate);
+    return {
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: isNaN(parsed) ? now : new Date(parsed),
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    };
+  });
 
   return [...staticPages, ...coursePages, ...blogPages];
 }
