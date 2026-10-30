@@ -149,23 +149,25 @@ export default function Navbar() {
               </div>
             </Link>
             {/* ACCA Accreditation Logos */}
-            <div className="hidden sm:flex items-center space-x-2 border-l border-slate-200 pl-3">
-              <div className="relative w-12 h-12 rounded-lg overflow-hidden shadow-sm border border-slate-100">
+            <div className="hidden lg:flex items-center space-x-2.5 border-l border-slate-200 pl-3.5">
+              {/* Silver Learning Partner — landscape, wider */}
+              <div className="relative w-28 h-10 rounded-md overflow-hidden shadow-sm">
                 <Image
                   src="/assets/images/acca-silver-learning-partner.png"
                   alt="ACCA Silver Learning Partner"
                   fill
                   className="object-contain"
-                  sizes="48px"
+                  sizes="112px"
                 />
               </div>
-              <div className="relative w-12 h-12 rounded-lg overflow-hidden shadow-sm border border-slate-100">
+              {/* CBE Centre — near-square */}
+              <div className="relative w-10 h-10 rounded-md overflow-hidden shadow-sm">
                 <Image
                   src="/assets/images/acca-cbe-centre.png"
                   alt="ACCA Licensed CBE Centre"
                   fill
                   className="object-contain"
-                  sizes="48px"
+                  sizes="40px"
                 />
               </div>
             </div>

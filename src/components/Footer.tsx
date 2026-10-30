@@ -99,23 +99,25 @@ export default function Footer() {
             </div>
 
             {/* ACCA Accreditation Logos */}
-            <div className="flex items-center space-x-3 pt-1">
-              <div className="relative w-16 h-16 rounded-xl overflow-hidden bg-white shadow-md border border-white/10">
+            <div className="flex items-center gap-3 pt-1">
+              {/* Silver Learning Partner — wider/landscape */}
+              <div className="relative w-36 h-14 rounded-xl overflow-hidden bg-white shadow-md">
                 <Image
                   src="/assets/images/acca-silver-learning-partner.png"
                   alt="ACCA Silver Learning Partner"
                   fill
-                  className="object-contain p-1"
-                  sizes="64px"
+                  className="object-contain p-1.5"
+                  sizes="144px"
                 />
               </div>
-              <div className="relative w-16 h-16 rounded-xl overflow-hidden bg-white shadow-md border border-white/10">
+              {/* CBE Centre — square */}
+              <div className="relative w-14 h-14 rounded-xl overflow-hidden bg-white shadow-md">
                 <Image
                   src="/assets/images/acca-cbe-centre.png"
                   alt="ACCA Licensed CBE Centre"
                   fill
-                  className="object-contain p-1"
-                  sizes="64px"
+                  className="object-contain p-1.5"
+                  sizes="56px"
                 />
               </div>
             </div>
