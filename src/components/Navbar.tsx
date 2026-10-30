@@ -134,19 +134,42 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group">
-            <div className="relative w-36 h-12 sm:w-44 sm:h-13 transition-transform duration-300 group-hover:scale-[1.02]">
-              <Image
-                src="/assets/brand/logo.png"
-                alt="SKD Group of Institutions"
-                fill
-                priority
-                className="object-contain"
-                sizes="(max-width: 768px) 144px, 176px"
-              />
+          {/* Logo + ACCA Accreditation Badges */}
+          <div className="flex items-center space-x-3">
+            <Link href="/" className="flex items-center group">
+              <div className="relative w-36 h-12 sm:w-44 sm:h-13 transition-transform duration-300 group-hover:scale-[1.02]">
+                <Image
+                  src="/assets/brand/logo.png"
+                  alt="SKD Group of Institutions"
+                  fill
+                  priority
+                  className="object-contain"
+                  sizes="(max-width: 768px) 144px, 176px"
+                />
+              </div>
+            </Link>
+            {/* ACCA Accreditation Logos */}
+            <div className="hidden sm:flex items-center space-x-2 border-l border-slate-200 pl-3">
+              <div className="relative w-12 h-12 rounded-lg overflow-hidden shadow-sm border border-slate-100">
+                <Image
+                  src="/assets/images/acca-silver-learning-partner.jpg"
+                  alt="ACCA Silver Learning Partner"
+                  fill
+                  className="object-contain"
+                  sizes="48px"
+                />
+              </div>
+              <div className="relative w-12 h-12 rounded-lg overflow-hidden shadow-sm border border-slate-100">
+                <Image
+                  src="/assets/images/acca-cbe-centre.jpg"
+                  alt="ACCA Licensed CBE Centre"
+                  fill
+                  className="object-contain"
+                  sizes="48px"
+                />
+              </div>
             </div>
-          </Link>
+          </div>
 
           {/* Desktop Navigation Links */}
           <nav className="hidden lg:flex items-center space-x-1 font-medium text-[14px] text-[#14243D]">
@@ -356,7 +379,26 @@ export default function Navbar() {
                 <Award className="w-4 h-4 mr-1.5 text-[#DCA43A]" />
                 ACCA Silver Learning Partner
               </span>
-              <span className="text-slate-300 text-[11px]">Chandigarh</span>
+              <div className="flex items-center space-x-2">
+                <div className="relative w-8 h-8 rounded overflow-hidden border border-white/20">
+                  <Image
+                    src="/assets/images/acca-silver-learning-partner.jpg"
+                    alt="ACCA Silver Learning Partner"
+                    fill
+                    className="object-contain"
+                    sizes="32px"
+                  />
+                </div>
+                <div className="relative w-8 h-8 rounded overflow-hidden border border-white/20">
+                  <Image
+                    src="/assets/images/acca-cbe-centre.jpg"
+                    alt="ACCA Licensed CBE Centre"
+                    fill
+                    className="object-contain"
+                    sizes="32px"
+                  />
+                </div>
+              </div>
             </div>
 
             <div className="grid grid-cols-2 gap-2 pt-1 font-medium text-sm">

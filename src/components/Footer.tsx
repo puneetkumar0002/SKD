@@ -98,6 +98,28 @@ export default function Footer() {
               <span>Approved ACCA Silver Learning Partner</span>
             </div>
 
+            {/* ACCA Accreditation Logos */}
+            <div className="flex items-center space-x-3 pt-1">
+              <div className="relative w-16 h-16 rounded-xl overflow-hidden bg-white shadow-md border border-white/10">
+                <Image
+                  src="/assets/images/acca-silver-learning-partner.jpg"
+                  alt="ACCA Silver Learning Partner"
+                  fill
+                  className="object-contain p-1"
+                  sizes="64px"
+                />
+              </div>
+              <div className="relative w-16 h-16 rounded-xl overflow-hidden bg-white shadow-md border border-white/10">
+                <Image
+                  src="/assets/images/acca-cbe-centre.jpg"
+                  alt="ACCA Licensed CBE Centre"
+                  fill
+                  className="object-contain p-1"
+                  sizes="64px"
+                />
+              </div>
+            </div>
+
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
               SKD Group of Institutions is a premier institute for professional accounting and finance education in Chandigarh, preparing students and working professionals for ACCA, CA, US CMA, and US CPA qualifications.
             </p>
